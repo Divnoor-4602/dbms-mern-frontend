@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-links {
+  @apply cursor-pointer border-b-2 border-b-white hover:border-b-black transition duration-300 opacity-60  hover:opacity-100;
+}
+
+.footer-links {
+  @apply border-slate-900 border-2 hover:border-b-white w-max transition duration-300 cursor-pointer text-sm;
+}
+
+.sidebar-nav-buttons {
+  @apply flex gap-2 rounded-xl py-6 items-center font-light;
+}
+
+/* sidebar css */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  height: 3px;
+  width: 24px;
+  top: 0;
+  left: 0;
+  background-color: black;
+  position: absolute;
+  transform: rotate(0);
+  transition: all 0.5s;
+  border-radius: 4px;
+}
+
+.hamburger-top {
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+/* open class to show when the hamburger when clicked */
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
